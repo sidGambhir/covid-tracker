@@ -15,20 +15,28 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
   if(dailyData){
   lineChart = dailyData.length ? (
     <Line
+      options = {{
+        responsive: true, 
+        title: {
+          display: true, 
+          text: "Global COVID-19 trend",
+        }
+      }}
       data={{
         labels: dailyData.map(({ date }) => date),
         datasets: [
           {
             data: dailyData.map(({ confirmed }) => confirmed),
             label: "Infected",
-            borderColor: "#3333ff",
+            borderColor: "rgba(0, 0, 255, 0.5)",
+            backgroundColor: "rgba(102, 179, 255, 0.5)",
             fill: true,
           },
           {
             data: dailyData.map(({ deaths }) => deaths),
             label: "Deaths",
-            borderColor: "red",
-            backgroundColor: "rgba(255,0,0,0.5)",
+            borderColor: "rgba(255, 0, 0, 0.5)",
+            backgroundColor: "rgba(237, 178, 178, 0.5)",
             fill: true,
           },
         ],
@@ -70,6 +78,8 @@ const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
         title: { display: true, text: `Current state in ${country}` },
       }}
     />
+    
+    
   ) : null;
 
   return (

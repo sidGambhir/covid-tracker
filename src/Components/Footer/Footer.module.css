@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
 .container {
   display: block;
   justify-content: center;
 }
 
-.list {
+h6{
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* .list {
   li {
     display: inline-block;
     a {
       color: #cccccc;
       font-size: 14px;
       @include transition;
+      
     }
   }
-}
+} */
+
+

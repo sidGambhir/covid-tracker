@@ -19,12 +19,12 @@ const Cards = ({
       value: confirmed.value,
       bottomText: "Number of infect cases of COVID-19",
     },
-    {
-      style: styles.recovered,
-      text: "Recovered",
-      value: recovered.value,
-      bottomText: "Number of recoveries from COVID-19",
-    },
+    // {
+    //   style: styles.recovered,
+    //   text: "Recovered",
+    //   value: recovered.value,
+    //   bottomText: "Number of recoveries from COVID-19",
+    // },
     {
       style: styles.deaths,
       text: "Deaths",
@@ -63,14 +63,14 @@ const Cards = ({
                   separator=","
                 />
               </Typography>
-              <Typography color="textPrimary">Last Updated at : </Typography>
+              <Typography color="textPrimary">Last Updated at: </Typography>
               <Typography color="textSecondary" variant="body2">
                 {new Date(lastUpdate).toDateString()}
               </Typography>
               <Typography color="textSecondary" variant="body2">
                 {new Date(lastUpdate).toLocaleTimeString()}
               </Typography>
-              <Typography variant="body2">{detail.bottomText}</Typography>
+              {/* <Typography variant="body2">{detail.bottomText}</Typography> */}
               <Typography color="textPrimary"> {country} </Typography>
             </CardContent>
           </Grid>
